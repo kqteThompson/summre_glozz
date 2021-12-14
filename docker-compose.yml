@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    image: my-glozz:latest
+    build: .
+    environment:
+      - DISPLAY
+    volumes:
+      - ./data/:/root/data/
+    network_mode: "host"
+    stdin_open: true
+    tty: true

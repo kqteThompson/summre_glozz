@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <annodis-styles>
+<unit-style>
+<type name="_newStyle_1"/>
+<background-color b="192" g="192" r="192"/>
+<invisibility value="true"/>
+</unit-style>
+</annodis-styles> -->
+
+<annotationModel>
+	<units>
+		<type name="Segment" />
+	</units>
+
+	<!-- Ajouter relations de reprise, de selection -->
+	
+	<relations>
+		<type name="Acknowledgement" oriented="true" />
+		<type name="Alternation" oriented="true" />
+		<type name="Backchannel" oriented="true" />
+		<type name="Background" oriented="true" />
+		<type name="Clarification_question" oriented="true" />
+		<type name="Comment" oriented="true" />
+		<type name="Conditional" oriented="true" />
+		<type name="Continuation" oriented="true" />
+		<type name="Contrast" oriented="true" />
+		<type name="Correction" oriented="true" />
+		<type name="Elaboration" oriented="true" />
+		<type name="Explanation" oriented="true" />
+		<type name="Narration" oriented="true" />
+		<type name="Parallel" oriented="true" />
+		<type name="Q-Elab" oriented="true" />
+		<type name="Question-answer_pair" oriented="true" />
+		<type name="Result" oriented="true" />	
+	</relations>	
+	<schemas>
+		<type name="Complex_discourse_unit" />	
+	</schemas>	
+</annotationModel>
