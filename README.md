@@ -14,23 +14,20 @@ Initial setup of FTP and Docker container
 
         mv /glozz-platform-dist-2.1/glozz-platform.jar .
 
-2. Initialize git-ftp
+2. Download the annotation files from the ftp to the `\data\` directory, such that you have:
 
-        git config git-ftp.url "ftp://ftp.example.net:21/public_html"
-        git config git-ftp.user "ftp-user"
-        git config git-ftp.password "secr3t"
+        * corpus\ containing .ac files
+        * annotations\ containing .aa files
+        * styles\ containing .as file
+        * annotationModels\ .aam file
 
-3. Download the annotation files from the ftp to the correct folder.
-
-        git ftp catchup
-
-4. Build the docker container
+3. Build the docker container
 
         docker-compose build & docker-compose up
 
     This will build and run the docker container. Type either `Control D` or `docker-compose down` to shut down gracefully. The next time you are ready to use simply run `docker-compose up`.
 
-## Annotation Workflow
+## Annotation Workflow (WIP)
 
 After the initial setup, the steps to annotating in Glozz then saving the annotations are:
 
@@ -40,14 +37,11 @@ After the initial setup, the steps to annotating in Glozz then saving the annota
 
         docker-compose up
 
-3. Remember to save annotations periodically while working in Glozz
+3. Remember to save work periodically while annotating in Glozz
 
-4. Quit Glozz (`Control D` or `docker-compose down`) and then upload your changes to the FTP
+4. Quit Glozz (`Control D` or `docker-compose down`) and then safeguard your changes, e.g. to the FTP (to be discussed further)
 
-        git commit <changed files> -m "description of changes"
-        git ftp push
-
-   **Note only the .aa files need to be uploaded to the FTP**
+   **Note only the .aa files need to be saved**
 
 
  
