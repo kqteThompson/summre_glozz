@@ -25,7 +25,7 @@ Initial setup of FTP and Docker container
 
         docker-compose build & docker-compose up
 
-    This will build and run the docker container. Type either `Control D` or `docker-compose down` to shut down gracefully. The next time you are ready to use simply run `docker-compose up`.
+    This will build and run the docker container. Type either `Control C` to shut down gracefully. The next time you are ready to use simply run `docker-compose up`.
 
 ## Annotation Workflow (WIP)
 
@@ -33,13 +33,13 @@ After the initial setup, the steps to annotating in Glozz then saving the annota
 
 1. Pull new files from FTP
 
-2. Start the docker container
+2. Start the docker container (add -d only if you want to run in detached mode)
 
-        docker-compose up
+        docker-compose up -d
 
 3. Remember to save work periodically while annotating in Glozz
 
-4. Quit Glozz (`Control D` or `docker-compose down`) and then safeguard your changes, e.g. to the FTP (to be discussed further)
+4. `Control C` to quit Glozz (or `docker-compose down` if in detached mode) and then safeguard your changes, e.g. to the FTP (to be discussed further)
 
    **Note only the .aa files need to be saved**
 
